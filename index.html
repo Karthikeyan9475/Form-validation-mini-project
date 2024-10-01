@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <!-- Google-Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="background">
+        <header>
+            <h1>Student Registration Form</h1>
+        </header>
+        <form id="registrationForm">
+            <label for="fname">First Name:
+                <input id="fname" type="text" name="FirstName" placeholder="Eg:david" />
+                <span class="error-message" id="fnameError"></span>
+            </label>
+            <label for="lname">Last Name:
+                <input id="lname" type="text" name="lastName" placeholder="Eg:miller" />
+                <span class="error-message" id="lnameError"></span>
+            </label>
+            <label for="DOB">Date of birth:
+                <input id="DOB" type="date" name="dob" />
+                <span class="error-message" id="dobError"></span>
+            </label>
+            <label>Gender:
+                <label for="male"><input id="male" type="radio" name="gender" value="Male" />Male</label>
+                <label for="female"><input id="female" type="radio" name="gender" value="Female" />Female</label>
+                <label for="others"><input id="others" type="radio" name="gender" value="Others" />Others</label>
+                <span class="error-message" id="genderError"></span>
+            </label>
+            <label for="id"> Student ID:
+                <input id="id" type="number" name="StudentID" />
+                <span class="error-message" id="idError"></span>
+            </label>
+            <label for="department">Department:
+                <input id="department" type="text" name="Name" placeholder="Eg:ECE"/>
+                <span class="error-message" id="departmentError"></span>
+            </label>
+            <label for="npass">Password:
+                <input id="npass" type="password" class="pass" name="password" />
+                <i id="npassopen" class="fas fa-eye-slash" onclick="showPassword()"></i>
+                <span class="error-message" id="npassError"></span>
+            </label>
+
+            <label for="cpass">Confirm Password:
+                <input id="cpass" class="pass" type="password" name="ConfirmPassword" />
+                <i id="cpassopen" class="fas fa-eye-slash" onclick="showPassword()"></i>
+                <span class="error-message" id="cpassError"></span>
+            </label>
+            <label for="mail">Email:
+                <input id="mail" type="email" name="Email" placeholder="Eg:Batmangotham@gmail.com" />
+                <span class="error-message" id="emailError"></span>
+            </label>
+            <label for="address">Address:
+                <input id="address" type="text" name="location" placeholder="Eg:No 16/34A,Gottam cross street,Gotham city." />
+                <span class="error-message" id="addressError"></span>
+            </label>
+            <label for="declare">
+                <input type="checkbox" id="declare" /> I declare all the above informations are true
+                <span class="error-message" id="declareError"></span>
+            </label>
+            <div class="btn">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+
+        <!-- Registered details section -->
+        <div id="registeredDetails" style="display: none;">
+            <h2>Registered Details:</h2>
+            <p id="details"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
